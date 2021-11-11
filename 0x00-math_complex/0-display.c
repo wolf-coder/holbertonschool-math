@@ -23,7 +23,12 @@ void display_complex_number(complex c)
 	else
 	{
 		if (c.im)
-			printf("%.gi", c.im);
+		{
+			if (c.im != 1 && c.im != (-1))
+				printf("%.gi", c.im);
+			else
+				printf("%s", (c.im == 1) ? "i" : "-i");
+		}
 		else
 			printf("0");
 	}
