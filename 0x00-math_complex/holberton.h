@@ -2,6 +2,8 @@
 #define Func_h
 
 #include <stdio.h>
+#include <math.h>
+
 /**
  * struct complex - Structure to represent a complex number.
  * @re: Real part of the complex number.
@@ -16,4 +18,6 @@ typedef struct complex complex;
 
 void display_complex_number(complex c);
 complex conjugate(complex c);
+double modulus(complex c);
+
 #endif
