@@ -6,7 +6,7 @@
  * @c2: The given complex number.
  * @c3: Pointer the resulted Complex number .
  * Return: Void.
- **/
+ */
 void multiplication(complex c1, complex c2, complex *c3)
 {
 	c3->re = (c1.re * c2.re) - (c1.im * c2.im);
