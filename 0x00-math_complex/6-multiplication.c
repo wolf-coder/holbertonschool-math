@@ -4,7 +4,7 @@
  * complex numbers.
  * @c1: The given complex number.
  * @c2: The given complex number.
- * @c3: Pointer the resulted Complex number .
+ * @c3: Pointer the resulted Complex number.
  * Return: Void.
  */
 void multiplication(complex c1, complex c2, complex *c3)
