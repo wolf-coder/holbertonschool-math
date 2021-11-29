@@ -2,7 +2,7 @@
 #define Func_h
 
 /**
- * struct complex - Structure to represent a Node
+ * struct Node - Structure to represent a Node
  * @elt: Iteration result of Heron's formula.
  * @next: Node Pointer to the next element.
 */
