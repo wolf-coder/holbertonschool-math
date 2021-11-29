@@ -25,8 +25,8 @@ t_cell *heron(double p, double x0)
 {
 	double Actual_sqrt = sqrt(p);
 	t_cell *Head = NULL;
-	t_cell *ptr = NULL;
-	double pre_elt = 0;
+	t_cell *ptr = NULL, *ptr_tmp = NULL;
+	double PREV_elt = 0;
 
 	Head = (t_cell *) malloc(sizeof(t_cell));
 	if (!Head)
@@ -37,13 +37,13 @@ t_cell *heron(double p, double x0)
 
 	while (fabs(Iteration(p, ptr->elt) - Actual_sqrt) >= 0.000000001)
 	{
-	pre_elt = ptr->elt;
+		PREV_elt = ptr->elt;
 
-	ptr->next = (t_cell *) malloc(sizeof(t_cell));
-	ptr = ptr->next;
-	ptr->elt = Iteration(p, pre_elt);
-	ptr->next = NULL;
+		ptr_tmp = ptr;
+		ptr = (t_cell *) malloc(sizeof(t_cell));
+		ptr->next = ptr_tmp;
+		ptr->elt = Iteration(p, PREV_elt);
 	}
 
-	return (Head);
+	return (ptr);
 }
